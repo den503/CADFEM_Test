@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Title {% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    {% block extra_head %}
+    {% endblock %}
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-sm-center">
+            <div class="col border bg-light">
+                {% block form %}
+                {% endblock %}
+            </div>
+            <div class="col-sm border bg-light">
+                {% block results %}
+                {% endblock %}
+            </div>
+        </div>
+        <div class="row border bg-light">
+            {% block notes_list %}
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>
