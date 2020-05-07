@@ -83,7 +83,8 @@ class DealStatus(models.Model):
     stage = models.ForeignKey(DealStage, on_delete=models.CASCADE, related_name='status', verbose_name='Стадия',
                               db_index=True)
     expected_deal_date = models.DateField(verbose_name='Дата предполагаемого совершения сделки', db_index=True)
-    created = models.DateTimeField(verbose_name='Дата создания текущей записи', auto_now_add=True, editable=True)
+    created = models.DateTimeField(verbose_name='Дата создания текущей записи', auto_now_add=True, editable=True,
+                                   db_index=True)
 
     def __str__(self):
         return self.deal.name
